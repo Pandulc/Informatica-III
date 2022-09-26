@@ -1,4 +1,4 @@
-package Ordenamiento;
+package ordenamiento;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Recursividad;
+package recursividad;
 
 public class ejeRec_5 {
     public static void main(String[] args) {
