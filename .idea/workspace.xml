@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4845b00-7476-42a9-ac9c-606d9eeb3e13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/colas/arrayQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/colas/eje1_aQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/colas/listQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pilas/arrayStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pilas/eje1_aStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pilas/eje1_lStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pilas/listStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/listNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ordenamiento/ejeSort_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ordenamiento/ejeSort_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recursividad/ejeRec_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recursividad/ejeRec_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recursividad/ejeRec_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recursividad/ejeRec_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recursividad/ejeRec_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recursividad/ejeRec_3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recursividad/ejeRec_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recursividad/ejeRec_4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recursividad/ejeRec_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recursividad/ejeRec_5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recursividad/ejeRec_6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recursividad/ejeRec_6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pilas/arrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pilas/arrayStack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +59,9 @@
       <workItem from="1663182667703" duration="4737000" />
       <workItem from="1663187762226" duration="1318000" />
       <workItem from="1664147453487" duration="113000" />
-      <workItem from="1664220886950" duration="7385000" />
+      <workItem from="1664220886950" duration="8328000" />
+      <workItem from="1664313675004" duration="1080000" />
+      <workItem from="1665002980696" duration="2777000" />
     </task>
     <servers />
   </component>

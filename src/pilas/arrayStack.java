@@ -1,6 +1,5 @@
 package pilas;
 
-import java.util.Stack;
 
 public class arrayStack<AnyType> {
     private AnyType[] theArray;
