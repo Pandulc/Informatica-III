@@ -1,11 +1,11 @@
 package arboles;
 
-
 public class Node<AnyType> {
 
     private AnyType element;
     private Node<AnyType> left;
     private Node<AnyType> right;
+
 
     public Node() {
     }
