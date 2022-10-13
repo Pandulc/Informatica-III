@@ -41,6 +41,8 @@ public class Prueba {
         System.out.println("Despues de delete");
 
         tree.printfTree();
+        System.out.println("\n");
+        tree.printAsTree();
 
     }
 }

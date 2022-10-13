@@ -2,8 +2,8 @@ package arboles;
 
 public class BinaryTree {
     private Node<Integer> raiz;
-
     private Integer depth;
+
     public BinaryTree(Integer data) {
         this.raiz = new Node<>(data);
         this.depth = 0;
@@ -77,74 +77,88 @@ public class BinaryTree {
         }
     }
 
-    public void delete (Integer x) throws Exception {
-        if (x.equals(raiz.getElement())){
-            if(raiz.getLeft() == null && raiz.getRight() == null) raiz = null;
+    public void delete(Integer x) throws Exception {
+        if (x.equals(raiz.getElement())) {
+            if (raiz.getLeft() == null && raiz.getRight() == null) raiz = null;
             else if (raiz.getRight() == null) raiz = raiz.getLeft();
             else if (raiz.getLeft() == null) raiz = raiz.getRight();
-            else{
+            else {
                 Node<Integer> aux = raiz.getLeft();
                 raiz = raiz.getRight();
                 Node<Integer> aux2 = raiz.getLeft();
-                if(aux2 != null){
-                    while(aux2.getLeft() != null){
+                if (aux2 != null) {
+                    while (aux2.getLeft() != null) {
                         aux2 = aux2.getLeft();
                     }
                     aux2.setLeft(aux);
-                }
-                else raiz.setLeft(aux);
+                } else raiz.setLeft(aux);
             }
 
-        }
-        else if (x < raiz.getElement() && raiz.getLeft() != null) raiz.setLeft(delete(x, raiz.getLeft()));
+        } else if (x < raiz.getElement() && raiz.getLeft() != null) raiz.setLeft(delete(x, raiz.getLeft()));
         else if (x > raiz.getElement() && raiz.getRight() != null) raiz.setRight(delete(x, raiz.getRight()));
         else throw new Exception("El elemento no esta en el arbol");
     }
 
-    private Node<Integer> delete (Integer x, Node<Integer> node) throws Exception {
-        if (x.equals(node.getElement())){
-            if(node.getLeft() == null && node.getRight() == null) node = null;
+    private Node<Integer> delete(Integer x, Node<Integer> node) throws Exception {
+        if (x.equals(node.getElement())) {
+            if (node.getLeft() == null && node.getRight() == null) node = null;
             else if (node.getRight() == null) node = node.getLeft();
-            else if (node.getLeft() == null) node = node.getRight() ;
-            else{
+            else if (node.getLeft() == null) node = node.getRight();
+            else {
                 Node<Integer> aux = node.getLeft();
                 node = node.getRight();
                 Node<Integer> aux2 = node.getLeft();
-                if(aux2 != null){
-                    while(aux2.getLeft() != null){
+                if (aux2 != null) {
+                    while (aux2.getLeft() != null) {
                         aux2 = aux2.getLeft();
                     }
                     aux2.setLeft(aux);
-                }
-                else node.setLeft(aux);
+                } else node.setLeft(aux);
             }
-        }
-        else if (x < node.getElement() && node.getLeft() != null) node.setLeft(delete(x, node.getLeft()));
+        } else if (x < node.getElement() && node.getLeft() != null) node.setLeft(delete(x, node.getLeft()));
         else if (x > node.getElement() && node.getRight() != null) node.setRight(delete(x, node.getRight()));
         else throw new Exception("El elemento no esta en el arbol");
         return node;
     }
 
-    public Integer depth (){
-        int depthl = 0;
-        if(raiz.getLeft() != null){
-            depth(raiz.getLeft(), depthl+1);
+    public void printAsTree() {
+        System.out.println(raiz.getElement());
+        if (raiz.getLeft() != null) printAsTree(raiz.getLeft(), 1);
+        if (raiz.getRight() != null) printAsTree(raiz.getRight(), 1);
+    }
+
+    private void printAsTree(Node<Integer> node, int i) {
+        for (int j = 0; j < i; j++) {
+            if (i == 1) System.out.print("├─");
+            else if (j < i - 1) System.out.print("│  ");
+            else System.out.print("├─ ");
         }
-        if(raiz.getRight() != null){
-            depth(raiz.getRight(), depthl+1);
+        if (node != null) {
+            System.out.println(node.getElement());
+            printAsTree(node.getLeft(), i + 1);
+            printAsTree(node.getRight(), i + 1);
+        } else System.out.println();
+    }
+
+    public Integer depth() {
+        int depthl = 0;
+        if (raiz.getLeft() != null) {
+            depth(raiz.getLeft(), depthl + 1);
+        }
+        if (raiz.getRight() != null) {
+            depth(raiz.getRight(), depthl + 1);
         }
         return depth;
     }
 
-    private Integer depth (Node<Integer> node, Integer depthl){
-        if(node.getLeft() != null){
-            depth(node.getLeft(), depthl+1);
+    private Integer depth(Node<Integer> node, Integer depthl) {
+        if (node.getLeft() != null) {
+            depth(node.getLeft(), depthl + 1);
         }
-        if(node.getRight() != null){
-            depth(node.getRight(), depthl+1);
-        }
-        else{
-            if(depth < depthl) depth = depthl;
+        if (node.getRight() != null) {
+            depth(node.getRight(), depthl + 1);
+        } else {
+            if (depth < depthl) depth = depthl;
         }
         return depth;
     }
